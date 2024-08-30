@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx
+  name: nginx
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  strategy: {}
+  template:
+    labels:
+      app: nginx
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        env:
+          - name: api-url
+            value: prod.ifcloud.com.br
+

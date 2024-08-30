@@ -1,0 +1,17 @@
+resources:
+  - ../../../nginx/base
+
+patches:
+  - path: deployment.yaml
+
+replicas:
+  - name: nginx
+    count: 4
+namespace: prod-belem
+
+
+
+
+
+
+

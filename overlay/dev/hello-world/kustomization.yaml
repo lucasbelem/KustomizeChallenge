@@ -1,0 +1,10 @@
+resources:
+  - ../../../hello-world/base
+
+patches:
+  - path: deployment.yaml
+
+namespace: prod-belem
+replicas:
+  - name: hello-world
+    count: 4

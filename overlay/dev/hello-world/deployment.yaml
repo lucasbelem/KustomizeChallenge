@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+spec:
+  template:
+    spec:
+      containers:
+      - image: nginx
+        name: monopole/hello:1
+        resources:
+          requests:
+            cpu: 2000m
+            memory: 1Gi
