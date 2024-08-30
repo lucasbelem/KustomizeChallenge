@@ -1,5 +1,5 @@
 resources:
-  - ../../../nginx/base
+  - https://github.com/lucasbelem/KustomizeChallenge/nginx/base
 
 patches:
   - path: deployment.yaml
@@ -8,7 +8,6 @@ replicas:
   - name: nginx
     count: 4
 namespace: prod-belem
-
 
 
 
